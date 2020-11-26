@@ -29,18 +29,17 @@ public class Teste {
 				String nome_completo = sc.next();
 				System.out.print("Digite a idade: ");
 				int idade = sc.nextInt();
-				System.out.print("Digite o endereço no formato (Rua, número, CEP, bairro, cidade: ");
+				System.out.print("Digite o endereço no formato (Rua, número, CEP, bairro, cidade): ");
 				String endereço = sc.next();
 				Pessoa p = new Pessoa(id, nome_completo, idade, endereço);
 				list.add(p);
 				System.out.print("Pessoa cadastrada com sucesso!");
-				System.out.print(
-						"Caso deseje fazer outro cadastro digite 1, ou digite outro número para sair do programa: ");
+				System.out.print("Caso deseje fazer outro cadastro digite 1, ou digite outro número para sair do programa: ");
 				z = sc.nextInt();
 
-			}
-
-			while (z == 1);
-		}
+			}while (z == 1);
+		}//if x==1
 	}
+	
+	
 }
