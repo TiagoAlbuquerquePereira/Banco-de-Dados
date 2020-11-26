@@ -5,7 +5,7 @@ public class Pessoa {
 	private int ID;
 	private String nome;
 	private int idade;
-	private String endereço;
+	private String endereco;
 	
 	
 	
@@ -14,7 +14,7 @@ public class Pessoa {
 		ID = iD;
 		this.nome = nome;
 		this.idade = idade;
-		this.endereço = endereço;
+		this.endereco = endereço;
 	}
 
 
@@ -49,12 +49,12 @@ public class Pessoa {
 
 
 	public String getEndereço() {
-		return endereço;
+		return endereco;
 	}
 
 
 	public void setEndereço(String endereço) {
-		this.endereço = endereço;
+		this.endereco = endereço;
 	}
 	
 	
