@@ -21,10 +21,12 @@ public class ConexaoMysql {
 
 	private static final SessionFactory sessionFactory;
 	private static final ThreadLocal<Session> threadLocal = new ThreadLocal<>();
-
+    
 	static {
+		System.out.print(new File("").getAbsolutePath());
+		System.out.print(new File("").getPath());
 		try {
-			File f = new File("/config/hibernate.cfg.xml");
+			File f = new File(new File("").getAbsolutePath()+File.separator+"src"+File.separator+"config"+File.separator+"hibernate.cfg.xml");
 			Configuration config = new AnnotationConfiguration().configure(f);
 
 			sessionFactory = config.buildSessionFactory();

@@ -1,62 +1,67 @@
 package objetos;
 
-public class Pessoa {
+import java.io.Serializable;
 
-	private int ID;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ABC.Pessoa")
+public class Pessoa implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer ID;
 	private String nome;
-	private int idade;
+	private Integer idade;
 	private String endereco;
-	
-	
-	
-	public Pessoa(int iD, String nome, int idade, String endereço) {
-		super();
-		ID = iD;
-		this.nome = nome;
-		this.idade = idade;
-		this.endereco = endereço;
-	}
 
-
-	public int getID() {
+	public Integer getID() {
 		return ID;
 	}
 
-
-	public void setID(int iD) {
+	public void setID(Integer iD) {
 		ID = iD;
 	}
-
 
 	public String getNome() {
 		return nome;
 	}
 
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
-
-	public int getIdade() {
+	public Integer getIdade() {
 		return idade;
 	}
 
-
-	public void setIdade(int idade) {
+	public void setIdade(Integer idade) {
 		this.idade = idade;
 	}
 
-
-	public String getEndereço() {
+	public String getEndereco() {
 		return endereco;
 	}
 
-
-	public void setEndereço(String endereço) {
-		this.endereco = endereço;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
-	
-	
-	
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	@Override
+	public String toString() {
+		return "Pessoa [ID=" + ID + ", nome=" + nome + ", idade=" + idade + ", endereco=" + endereco + "]";
+	}
+
 }
